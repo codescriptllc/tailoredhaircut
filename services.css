@@ -1,0 +1,354 @@
+:root {
+    /* MAIN COLORS */
+    --logoOrange: #ECA125;
+    --logoOrangeLighter: #eca0254c;
+    --logoOrangeHover: #eca02589;
+    --logoRed: #C74B19;
+    --logoGrey: #CCCCCE;
+    --white: #ffffff;
+    --black: #000000;
+    /* FONT-SIZES */
+    --mainHeading: 3.5em;
+    --secondaryHeading: 2.0em;
+    --paragraphSize: 1.5em;
+    --captionSize: 1em;
+    --phoneParagraph: 0.8em;
+    /* SECTION PADDING */
+    --normalPadding: 25px;
+    /* ANIMATING BUTTONS */
+    --buttonTransitionTime: .3s;
+}
+
+::selection {
+    background: var(--logoOrangeLighter); /* WebKit/Blink Browsers */
+}
+
+*{
+    font-family: 'Cabin', sans-serif;
+    scroll-behavior: smooth;
+    /* disable hightlight of the pictures and text */
+    -webkit-touch-callout: none; /* Chrome, Safari, Edge, Opera */
+    -webkit-user-select: none; /* Chrome, Safari, Firefox on iOS (iOS Mobile) */
+}
+
+/* make the whole page background black */
+body, html{
+    background-color: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+/* Keyframes for  fading in */
+@keyframes fadeIn {
+    /* 0 - 50% */ 
+    0%, 50% {opacity: 0;}
+    /* 50% - 100% */
+    50%, 100% {opacity: 1;}
+}
+/*
+/
+/
+/
+/
+/
+*/
+.topSection{
+    width: 95%;
+    margin: 3% auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.haircutForMen{
+    margin-right: 10%;
+}
+
+.haircutForMen h5{
+    color: gray;
+}
+
+.haircutForMen h1{
+    margin-top: 1%;
+    margin-bottom: 3%;
+    font-weight: bolder;
+    font-size: 56px;
+}
+
+.haircutForMen p{
+    margin: 8px 0 0;
+    line-height: 29.7px;
+}
+
+.bookNowButton{
+    margin-top: 4%;
+}
+
+.haircutForMen a{
+    padding: 16px 32px;
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.haircutForMen a:hover{
+    padding: 16px 32px;
+    background-color: white;
+    color: gray;
+    text-decoration: none;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.topSection img{
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    height: auto;
+}
+
+@media screen and (max-width: 767px){  
+
+    .topSection{
+        width: 95%;
+        margin: 3% auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .topSection img{
+        width: 100%;
+        height: inherit;
+        border-radius: 16px;
+        margin-bottom: 10%;
+    }
+
+    .bookNowButton{
+        margin-top: 10%;
+    }
+}
+/*
+.
+.
+.
+.
+*/
+.bottomSection{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.additionalServices h2{
+    font-size: 45px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.additionalServices p{
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.extraServices{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.extraServices ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+    margin-top: 10%;
+}
+
+ul li img{
+    margin-bottom: 40%;
+}
+
+.extraServices p{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.learnMoreButton{
+    margin-top: 6%;
+}
+
+.additionalServices a{
+    padding: 16px 32px;
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.additionalServices a:hover{
+    padding: 16px 32px;
+    background-color: white;
+    color: gray;
+    text-decoration: none;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+@media screen and (max-width: 767px){  
+    .bottomSection{
+        margin-top:30%;
+        text-align: center;
+    }
+
+    .additionalServices h2{
+        font-size: 40px;
+        font-weight: bold;
+        margin: 8px 0;
+    }
+
+    .additionalServices p{
+        font-weight: normal;
+        font-size: 15px;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .extraServices ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-decoration: none;
+        list-style: none;
+        margin-top: 10%;
+    }
+
+    ul li img{
+        margin-bottom: 10%;
+    }
+
+    .extraServices p{
+        font-size: 30px;
+        font-weight: bolder;
+        margin-bottom: 20%;
+    }
+
+    .learnMoreButton{
+        margin-top: 3%;
+    }
+}
+
+/* 
+.
+.
+.
+.
+ */
+.greatHair{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.greatHair h2{
+    font-size: 45px;
+    font-weight: bold;
+    margin: 5% 0;
+}
+
+.greatHair p{
+    font-weight: normal;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 767px){  
+    .greatHair{
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 30%;
+        text-align: center;
+    }
+    
+    .greatHair h2{
+        font-size: 45px;
+        font-weight: bold;
+        margin: 5% 0;
+    }
+    
+    .greatHair p{
+        font-weight: normal;
+        font-size: 18px;
+    }
+
+
+}
+
+/* 
+.
+.
+.
+.
+ */
+ .consulation{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+ .consulation img{
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    height: auto;
+}
+
+.consulationText h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+@media screen and (max-width: 767px){  
+    .consulation{
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 30%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .consulation img{
+        width: 100%;
+        height: inherit;
+        border-radius: 16px;
+        margin-bottom: 10%;
+    }
+
+
+}
