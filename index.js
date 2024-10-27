@@ -21,3 +21,10 @@ document.querySelectorAll('.video-container').forEach(container => {
     pauseIcon.style.display = 'none';
   });
 });
+
+
+window.addEventListener('load', () => {
+  document.querySelectorAll('.hover-video').forEach(video => {
+    video.load();
+  });
+});
