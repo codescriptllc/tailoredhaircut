@@ -210,7 +210,6 @@ body, html{
 
 
 @media screen and (max-width: 767px){  
-
     .container-fluid .overlay {
         position: absolute;
         top: 13%;
@@ -219,6 +218,8 @@ body, html{
         height: 91vh;
         background-color: rgba(66, 66, 66, 0.5); /* Adjust color and transparency */
         z-index: 1;
+        /* not scroolable */
+        overflow: hidden;
     }
 
     .location{
