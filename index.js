@@ -23,8 +23,22 @@ document.querySelectorAll('.video-container').forEach(container => {
 });
 
 
-window.addEventListener('load', () => {
-  document.querySelectorAll('.hover-video').forEach(video => {
-    video.load();
+document.addEventListener('DOMContentLoaded', () => {
+  const videos = document.querySelectorAll('.hover-video');
+
+  videos.forEach(video => {
+    const videoSource = video.querySelector('source').src;
+    video.removeAttribute('src'); // Initially remove the source
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          video.src = videoSource;  // Set the source only when in view
+          video.load();
+          observer.unobserve(video);
+        }
+      });
+    });
+    observer.observe(video);
   });
 });
