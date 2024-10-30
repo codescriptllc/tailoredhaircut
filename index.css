@@ -210,8 +210,14 @@ body, html{
     .location{
         margin-top: 15%;
         width: 90%;
+        text-align: left;
+        margin-left: 5%;
     }
 
+    .locationdisplay{
+        width: 100%;
+    }
+    
     .workExample{
         width: 95%;
         margin: 0 auto;
