@@ -42,3 +42,31 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(video);
   });
 });
+
+
+
+// REWIEVS
+let currentReview = 0;
+const reviews = document.querySelectorAll(".review");
+const reviewCount = reviews.length;
+
+// Function to update the review display
+function showReview(index) {
+  const offset = -index * 100;
+  document.querySelector(".review-slider").style.transform = `translateX(${offset}%)`;
+}
+
+// Previous review button function
+function prevReview() {
+  currentReview = (currentReview > 0) ? currentReview - 1 : reviewCount - 1;
+  showReview(currentReview);
+}
+
+// Next review button function
+function nextReview() {
+  currentReview = (currentReview < reviewCount - 1) ? currentReview + 1 : 0;
+  showReview(currentReview);
+}
+
+// Auto-scroll every 30 seconds
+setInterval(nextReview, 30000);

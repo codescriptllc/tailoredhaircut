@@ -51,8 +51,8 @@ footer{
 }
 
 .followSocials img{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     padding: .5px;
     margin-right: 2%;
@@ -60,7 +60,7 @@ footer{
 }
 
 .followSocials img:hover{
-    background-color: orange;
+    background-color: rgb(203, 134, 61);
 }
 
 @media screen and (max-width: 767px){   
